@@ -1,0 +1,76 @@
+.footer .footer-bottom {
+    background-color: #e7e7e7;
+}
+.footer .footer-bottom .footer-bottom-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.page-width {
+    max-width: var(--page-width);
+    padding: 0 var(--page-width-padding-dekstop);
+    margin: 0 auto;
+}
+.footer .footer-bottom .footer-bottom-wrapper .footer-copyright {
+    font-family: Jost-Variable, sans-serif;
+    font-weight: 600;
+    font-size: clamp(10px, calc(12 * (100vw / 1440)), 14px);
+    line-height: calc(13.2 * (100vw / 1440));
+    color: #000;
+    text-decoration: none;
+    padding: 10px 0;
+    margin: 0;
+}
+.footer .footer-bottom .footer-bottom-wrapper .footer-copyright small, .footer .footer-bottom .footer-bottom-wrapper .footer-copyright a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: inherit;
+}
+.contact-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+.contact-card .icon {
+    line-height: 0;
+}
+.contacts-container {
+    width: 22.1%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.contact-detail {
+    margin: -5px 0;
+    font-family: Jost-Variable, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(10px, calc(12 * (100vw / 1440)), 14px);
+    line-height: calc(21 * (100vw / 1440));
+    color: #2c2728;
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.bi-facebook::before {
+    content: "\f344";
+}

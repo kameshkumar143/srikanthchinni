@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "61f1",
+      "fullname": "fdgsdgsdgsd",
+      "email": "fsdfsdfsdf@fasdsadasdsa.asd",
+      "mobile": "8567856756",
+      "address": "rtertertert 54646346436346",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "acceptTerms": true
+    },
+    {
+      "id": "c852",
+      "fullname": "hanuman",
+      "email": "hanuman411@gmai.com",
+      "mobile": "8888888888",
+      "address": "dsfsdfsdf dsfsdfsdf",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "acceptTerms": true
+    }
+  ],
+  "contact": []
+}

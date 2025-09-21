@@ -1,0 +1,19 @@
+/* Custom style to truly center Toastr popup at top */
+
+@import 'ngx-toastr/toastr';
+body {
+    overflow-x: hidden;
+}
+.slick-track {
+    height: 60vh !important;
+}
+.slick-dots {
+    position: unset !important;
+}
+.toast-top-center {
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    width: auto;
+}

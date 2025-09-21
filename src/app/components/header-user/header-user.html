@@ -1,0 +1,14 @@
+<div class="header-user" *ngIf="user">
+  <div class="user-icon" (mouseenter)="showPopup=true" (mouseleave)="showPopup=false">
+    <img src="assets/images/user-icon.png" alt="User" width="32" height="32" />
+    <div class="user-popup" *ngIf="showPopup">
+      <div><strong>{{user.name}}</strong></div>
+      <div>{{user.email}}</div>
+      <div>{{user.mobile}}</div>
+      <button (click)="logout()">Logout</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="!user">
+  <a routerLink="/login">Login</a> | <a routerLink="/register">Register</a>
+</div>
