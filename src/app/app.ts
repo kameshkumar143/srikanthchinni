@@ -4,10 +4,12 @@ import { Footer } from './components/footer/footer';
 import { StorageService } from './utils/services/storage.service';
 import { UserStateService } from './utils/services/user-state.service';
 import { CommonModule } from '@angular/common';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, RouterModule, Footer],
+  imports: [RouterOutlet, CommonModule, RouterModule, Footer, MatTooltipModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -15,7 +17,7 @@ export class App implements OnInit {
   protected readonly title = signal('Kamesh Ristration Form');
   showPopup = false;
 
-  constructor(private storage: StorageService, public userState: UserStateService) {
+  constructor(private storage: StorageService, public userState: UserStateService, private toastr: ToastrService) {
     this.userState.updateUserFromStorage();
   }
 
@@ -28,7 +30,8 @@ export class App implements OnInit {
     this.storage.removeSession('loggedInUser');
     this.storage.removeCookie('loggedInUser');
     this.userState.clearUser();
-    window.location.reload();
+    this.toastr.success('Logout successful');
+    this.showPopup = false;
   }
 
   changesPassword() {

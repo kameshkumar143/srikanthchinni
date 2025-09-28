@@ -261,3 +261,9 @@
     font-size: 10px;
     margin-left: 0px !important;
 }
+.navbar-nav {
+    gap: 3px;
+}
+.main-content {
+    min-height: calc(70vh - 141px); /* Adjust based on header/footer height */
+}

@@ -1,4 +1,4 @@
-<div class="">
+<div class="" style="height: fit-content;">
   <div class="ftco-section">
     <nav class="navbar navbar-expand-lg bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container-fluid">
@@ -32,7 +32,7 @@
 
           <div class="header-user" *ngIf="userState.userSignal() as user">
             <div class="user-icon" (mouseenter)="showPopup=true" (mouseleave)="showPopup=false">
-              <img src="../assets/images/user.svg" alt="User" width="32" height="32" />
+              <img src="../assets/images/user.svg" alt="User" width="32" height="32" matTooltip="User Info" matTooltipPosition="above" />
               <div class="user-popup" *ngIf="showPopup">
                 <span style="position: absolute; top: -16px; right: -3px;">
                   <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +66,7 @@
       </div>
     </nav>
   </div>
-  <div>
+  <div class="main-content">
     <router-outlet />
   </div>
   <div>

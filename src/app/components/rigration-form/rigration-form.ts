@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormGroup, FormControl, FormBuilder, AbstractControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import Validation from '../../utils/validation';
@@ -28,8 +28,11 @@ export class RigrationForm {
   isShowPassword = false;
   isShowConfirmPassword = false;
 
-  constructor(private formBuilder: FormBuilder, private userService: UserService,
-    private toastr: ToastrService
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService: UserService,
+    private toastr: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -95,6 +98,7 @@ export class RigrationForm {
         next: (res) => {
           this.toastr.success('Registration successful!', 'Success');
           this.onReset();
+          this.router.navigate(['/login']);
         },
         error: (err) => {
           console.error('Error adding user', err);

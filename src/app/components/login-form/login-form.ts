@@ -16,7 +16,7 @@ import { UserStateService } from '../../utils/services/user-state.service';
 })
 export class LoginForm {
 
-   form: FormGroup = new FormGroup({
+  form: FormGroup = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
   });
